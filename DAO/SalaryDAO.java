@@ -11,6 +11,14 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 public class SalaryDAO {
+    public SalaryDAO(Connection connection) {
+
+    }
+
+    public SalaryDAO() {
+
+    }
+
     public void addSalary(Salary salary) throws SQLException {
         String sql = "INSERT INTO salaries (employee_id, amount, effective_date) VALUES (?, ?, ?)";
         try (Connection connection = DatabaseConnection.getConnection();

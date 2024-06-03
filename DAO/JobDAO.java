@@ -10,6 +10,14 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 public class JobDAO {
+    public JobDAO(Connection connection) {
+
+    }
+
+    public JobDAO() {
+
+    }
+
     public void addJob(Job job) throws SQLException {
         String sql = "INSERT INTO jobs (title, min_salary, max_salary) VALUES (?, ?, ?)";
         try (Connection connection = DatabaseConnection.getConnection();

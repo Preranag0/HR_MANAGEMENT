@@ -9,6 +9,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 public class DepartmentDAO {
+    public DepartmentDAO(Connection connection) {
+
+    }
+
+    public DepartmentDAO() {
+
+    }
+
     public void addDepartment(Department department) throws SQLException {
         String sql = "INSERT INTO departments (name) VALUES (?)";
         try (Connection connection = DatabaseConnection.getConnection();

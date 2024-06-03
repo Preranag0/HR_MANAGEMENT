@@ -10,6 +10,14 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 public class ProjectDAO {
+    public ProjectDAO(Connection connection) {
+
+    }
+
+    public ProjectDAO() {
+
+    }
+
     public void addProject(Project project) throws SQLException {
         String sql = "INSERT INTO projects (name, start_date, end_date) VALUES (?, ?, ?)";
         try (Connection connection = DatabaseConnection.getConnection();

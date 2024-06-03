@@ -1,5 +1,6 @@
 package DAO;
 import DButil.DatabaseConnection;
+import Service.EmployeeProjectServices;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,6 +9,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 public class EmployeeProjectDAO {
+    public EmployeeProjectDAO(Connection connection) {
+
+    }
+
+    public EmployeeProjectDAO() {
+
+    }
+
     public void addEmployeeProject(int employeeId, int projectId) throws SQLException {
         String sql = "INSERT INTO employee_projects (employee_id, project_id) VALUES (?, ?)";
         try (Connection connection = DatabaseConnection.getConnection();
@@ -54,5 +63,13 @@ public class EmployeeProjectDAO {
             statement.setInt(2, projectId);
             statement.executeUpdate();
         }
+    }
+
+    public List<Integer> getProjectsByEmployeeId(int employeeId) {
+        return null;
+    }
+
+    public List<EmployeeProjectServices> getAllEmployeeProjects() {
+        return null;
     }
 }

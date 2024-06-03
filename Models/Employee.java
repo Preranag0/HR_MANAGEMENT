@@ -36,6 +36,18 @@ public class Employee {
         this.departmentId = departmentId;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", departmentId=" + departmentId +
+                ", jobId=" + jobId +
+                ", email='" + email + '\'' +
+                ", hireDate=" + hireDate +
+                '}';
+    }
+
     public String getName() {
         return name;
     }
