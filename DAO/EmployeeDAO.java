@@ -58,6 +58,7 @@ public class EmployeeDAO {
                         resultSet.getInt("job_id"),
                         resultSet.getString("email"),
                         resultSet.getDate("hire_date")
+
                 ));
             }
         }
